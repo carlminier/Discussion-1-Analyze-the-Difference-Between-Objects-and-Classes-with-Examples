@@ -1,0 +1,45 @@
+package Discussion1;
+
+ // Define the Car class which serves as a blueprint for Car objects.
+ class Car {
+    // Instance variables (attributes) that represent the state of a Car object.
+    private String make;
+    private String model;
+    private int year;
+
+    /**
+     * Constructor for the Car class.
+     * This method is called when a new Car object is created.
+     * It initializes the object's properties.
+     */
+    public Car(String make, String model, int year) {
+        this.make = make;   // 'this.make' refers to the object's make, while 'make' is the constructor parameter.
+        this.model = model;
+        this.year = year;
+    }
+
+    // Returns a description of the car.
+    public String getDescription() {
+        return year + " " + make + " " + model;
+    }
+}
+
+// The main class that contains the entry point of the program.
+public class DifferenceObjectsClasses {
+    public static void main(String[] args) {
+        // 'Car' is a class that defines what a car is.
+        // We now create two objects (instances) of the Car class with specific details.
+
+        // Create the first Car object with specific values.
+        Car car1 = new Car("Toyota", "Camry", 2020);
+
+        // Create the second Car object with different values.
+        Car car2 = new Car("Honda", "Civic", 2018);
+
+        // Display the details of each car object.
+        System.out.println("Car 1 details: " + car1.getDescription());
+        System.out.println("Car 2 details: " + car2.getDescription());
+
+
+    }
+}
